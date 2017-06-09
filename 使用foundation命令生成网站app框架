@@ -1,0 +1,44 @@
+使用foundation命令生成网站app框架
+macserver1:~ admindyn$ cd Desktop/webtest/
+macserver1:webtest admindyn$ foundation new My_app
+Creating ./My_app
+      create  My_app
+Cloning into 'My_app'...
+remote: Counting objects: 120, done.
+remote: Total 120 (delta 0), reused 0 (delta 0), pack-reused 120
+Receiving objects: 100% (120/120), 40.78 KiB | 0 bytes/s, done.
+Resolving deltas: 100% (48/48), done.
+Installing dependencies with bower...
+bower jquery-placeholder#~2.0.7         mismatch Version declared in the json (2.0.8) is different than the resolved one (2.0.9)
+./My_app was created
+macserver1:webtest admindyn$ 
+
+该命令 自动生成基于Grunt 和 compass的Foundation 开发环境
+可以直接使用compass compile 和 compass wath 等compass命令
+
+使用compass 在于对foundation的方便化定制 对setting.scss进行编辑定制
+
+
+修改源代码定制bootstrap
+首先下载bootstrap源码
+
+源码包解压后 文件夹
+
+第一 package.json 用于npm install 的命令的 所以电脑需要先安装node.js命令 
+第二 less 文件夹 包含bootstrap中所有样式组件的less源代码
+
+第三 js 文件夹 包含所有的jquery插件 
+
+第四 保存字体文件
+
+第五 dist文件夹 保存编译后的css javascript 字体文件
+
+
+首先 进入该目录下 执行 npm install 主要用于安装自动化管理bootstrap的grunt插件
+
+
+然后 完成CSS的定制化  进入less文件夹 修改 variable.less 是全局变量的配置文件,bootstrap.less 是加载项的配置文件
+
+gruntfile.js是可以移除或添加新的js插件
+最后 在命令行执行
+grunt dist 命令

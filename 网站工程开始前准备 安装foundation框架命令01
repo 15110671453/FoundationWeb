@@ -1,0 +1,82 @@
+网站工程开始前准备 安装foundation框架命令01
+
+Last login: Thu Jun  8 13:31:41 on ttys000
+macserver1:~ admindyn$ cd Desktop/webtest/
+macserver1:webtest admindyn$ sudo npm install -g bower grunt-cli
+Password:
+npm WARN deprecated bower@1.8.0: ..psst! While Bower is maintained, we recommend Yarn and Webpack for *new* front-end projects! Yarn's advantage is security and reliability, and Webpack's is support for both CommonJS and AMD projects. Currently there's no migration path but we hope you'll help us figure out one.
+/usr/local/bin/bower -> /usr/local/lib/node_modules/bower/bin/bower
+/usr/local/bin/grunt -> /usr/local/lib/node_modules/grunt-cli/bin/grunt
+/usr/local/lib
+├── bower@1.8.0 
+└─┬ grunt-cli@1.2.0 
+  ├─┬ findup-sync@0.3.0 
+  │ └─┬ glob@5.0.15 
+  │   ├─┬ inflight@1.0.6 
+  │   │ ├── once@1.4.0  deduped
+  │   │ └── wrappy@1.0.2 
+  │   ├── inherits@2.0.3 
+  │   ├─┬ minimatch@3.0.4 
+  │   │ └─┬ brace-expansion@1.1.7 
+  │   │   ├── balanced-match@0.4.2 
+  │   │   └── concat-map@0.0.1 
+  │   ├─┬ once@1.4.0 
+  │   │ └── wrappy@1.0.2  deduped
+  │   └── path-is-absolute@1.0.1 
+  ├── grunt-known-options@1.1.0 
+  ├─┬ nopt@3.0.6 
+  │ └── abbrev@1.1.0 
+  └── resolve@1.1.7 
+
+macserver1:webtest admindyn$ gem install compass
+    Compass is charityware. If you love it, please donate on our behalf at http://umdf.org/compass Thanks!
+Successfully installed compass-1.0.3
+Parsing documentation for compass-1.0.3
+Done installing documentation for compass after 1 seconds
+1 gem installed
+macserver1:webtest admindyn$ gem install foundation
+Fetching: thor-0.19.4.gem (100%)
+Successfully installed thor-0.19.4
+Fetching: foundation-1.0.4.gem (100%)
+Successfully installed foundation-1.0.4
+Parsing documentation for thor-0.19.4
+Installing ri documentation for thor-0.19.4
+Parsing documentation for foundation-1.0.4
+Installing ri documentation for foundation-1.0.4
+Done installing documentation for thor, foundation after 1 seconds
+2 gems installed
+macserver1:webtest admindyn$ 
+
+
+执行css预编译处理
+
+macserver1:My_app admindyn$ compass compile
+directory stylesheets
+DEPRECATION WARNING on line 78 of /Users/admindyn/Desktop/webtest/My_app/bower_components/foundation/scss/foundation/components/_top-bar.scss: #{} interpolation near operators will be simplified
+in a future version of Sass. To preserve the current behavior, use quotes:
+
+  unquote("#{lower-bound($medium-range)}")
+
+    write stylesheets/app.css
+macserver1:My_app admindyn$ ls -la
+total 104
+drwxr-xr-x  19 admindyn  staff   646  6  8 14:43 .
+drwxr-xr-x   4 admindyn  staff   136  6  8 14:39 ..
+-rw-r--r--@  1 admindyn  staff  6148  6  8 14:40 .DS_Store
+-rw-r--r--   1 admindyn  staff    38  6  8 13:44 .bowerrc
+drwxr-xr-x  13 admindyn  staff   442  6  8 13:44 .git
+-rw-r--r--   1 admindyn  staff    61  6  8 13:44 .gitignore
+drwxr-xr-x   6 admindyn  staff   204  6  8 14:43 .sass-cache
+-rw-r--r--   1 admindyn  staff    78  6  8 13:44 Gemfile
+-rw-r--r--   1 admindyn  staff   597  6  8 13:44 Gemfile.lock
+-rw-r--r--   1 admindyn  staff   723  6  8 13:44 README.md
+-rw-r--r--   1 admindyn  staff   149  6  8 13:44 bower.json
+drwxr-xr-x   8 admindyn  staff   272  6  8 13:44 bower_components
+-rw-r--r--   1 admindyn  staff   902  6  8 13:44 config.rb
+-rw-r--r--   1 admindyn  staff   238  6  8 13:44 humans.txt
+-rw-r--r--   1 admindyn  staff  7354  6  8 13:44 index.html
+drwxr-xr-x   3 admindyn  staff   102  6  8 13:44 js
+-rw-r--r--   1 admindyn  staff   106  6  8 13:44 robots.txt
+drwxr-xr-x   4 admindyn  staff   136  6  8 13:44 scss
+drwxr-xr-x   3 admindyn  staff   102  6  8 14:43 stylesheets
+macserver1:My_app admindyn$ 
